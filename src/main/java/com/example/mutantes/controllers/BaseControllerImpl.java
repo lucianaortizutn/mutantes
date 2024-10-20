@@ -34,7 +34,11 @@ public abstract class BaseControllerImpl<E extends Mutant, S extends BaseService
             boolean mutant = isMutant(dna);
             entity.setMutant(mutant);
 
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.save(entity));
+            Mutant savedEntity = servicio.save(entity);
+
+            HttpStatus status = mutant ? HttpStatus.OK : HttpStatus.FORBIDDEN;
+
+            return ResponseEntity.status(status).body(servicio.save(entity));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"Error al analizar ADN.\"}");
         }

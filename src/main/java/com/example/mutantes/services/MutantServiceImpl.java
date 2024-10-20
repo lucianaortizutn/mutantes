@@ -8,11 +8,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MutantServiceImpl extends BaseServiceImpl<Mutant, Long> implements MutantService {
-    @Autowired
-    private MutantRepository mutantRepository;
+    private final MutantRepository mutantRepository;
 
-    public MutantServiceImpl(BaseRepository<Mutant, Long> baseRepository) {
+    @Autowired
+    public MutantServiceImpl(BaseRepository<Mutant, Long> baseRepository, MutantRepository mutantRepository) {
         super(baseRepository);
+        this.mutantRepository = mutantRepository;
     }
 
     @Override
