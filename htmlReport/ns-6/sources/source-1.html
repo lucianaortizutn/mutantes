@@ -1,0 +1,114 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > Revision</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.mutantes.entities.audit</a>
+</div>
+
+<h1>Coverage Summary for Class: Revision (com.example.mutantes.entities.audit)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+</tr>
+  <tr>
+    <td class="name">Revision$HibernateInstantiator$1Gv4ujWA</td>
+  </tr>
+  <tr>
+    <td class="name">Revision$HibernateInstantiator$zEG8CX7r</td>
+  </tr>
+  <tr>
+    <td class="name">Revision$HibernateProxy$6lrVZNRZ</td>
+  </tr>
+  <tr>
+    <td class="name">Revision$HibernateProxy$DR8fC54Q</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.example.mutantes.entities.audit;
+&nbsp;
+&nbsp;import com.example.mutantes.config.CustomRevisionListener;
+&nbsp;import jakarta.persistence.*;
+&nbsp;import lombok.Data;
+&nbsp;import org.hibernate.envers.RevisionEntity;
+&nbsp;import org.hibernate.envers.RevisionNumber;
+&nbsp;import org.hibernate.envers.RevisionTimestamp;
+&nbsp;
+&nbsp;import java.io.Serializable;
+&nbsp;import java.util.Date;
+&nbsp;
+&nbsp;@Entity
+&nbsp;@Table(name=&quot;REVISION_INFO&quot;)
+&nbsp;@RevisionEntity(CustomRevisionListener.class)
+&nbsp;@Data
+&nbsp;public class Revision implements Serializable {
+&nbsp;
+&nbsp;    private static final long serialVersionUID = 1L;
+&nbsp;
+&nbsp;    @Id
+&nbsp;    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator=&quot;revision_seq&quot;)
+&nbsp;    //@SequenceGenerator(
+&nbsp;      //      name=&quot;revision_seq&quot;,
+&nbsp;        //    sequenceName=&quot;rbac.seq_revision_id&quot;
+&nbsp;    //)
+&nbsp;    @RevisionNumber
+&nbsp;    private int id;
+&nbsp;
+&nbsp;    @Column(name=&quot;REVISION_DATE&quot;)
+&nbsp;    @Temporal(TemporalType.TIMESTAMP)
+&nbsp;    @RevisionTimestamp
+&nbsp;    private Date date;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-10-19 20:48</div>
+</div>
+</body>
+</html>
