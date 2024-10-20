@@ -104,13 +104,13 @@ Este proyecto implementa una API REST para detectar si una secuencia de ADN pert
 ### Instrucciones de ejecución
 
 1. **Clonar el Repositorio**
-```bash
-git clone https://github.com/lucianaortizutn/mutantes.git
-```
+  ```bash
+  git clone https://github.com/lucianaortizutn/mutantes.git
+  ```
 2. **Ejecutar "MutantesApplication.java"**
-- La API estará disponible en http://localhost:8080/swagger-ui/index.html
+   - La API estará disponible en http://localhost:8080/swagger-ui/index.html
 3. **Acceso a la base de datos H2**
-- Puedes acceder a la consola de H2 en http://localhost:8080/h2-console/
+   - Puedes acceder a la consola de H2 en http://localhost:8080/h2-console/
 
 ### Instrucciones para ejecutar las pruebas
 El proyecto cuenta con pruebas unitarias implementadas con **JUnit 5** y **Mockito**
