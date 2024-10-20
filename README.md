@@ -1,4 +1,4 @@
-# Mutant Detection API
+# API Detección de Mutantes
 
 Este proyecto implementa una API REST para detectar si una secuencia de ADN pertenece a un mutante o a un humano, basado en un examen de MercadoLibre. El servicio analiza cadenas de ADN y guarda los resultados en una base de datos H2.
 
